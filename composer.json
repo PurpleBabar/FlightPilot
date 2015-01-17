@@ -1,5 +1,5 @@
 {
-    "name": "flightpilot",
+    "name": "purplebabar/flightpilot",
     "type": "project",
     "description": "This is a Backbone to build simple app with Flight",
     "version": "1.0.0-dev",
