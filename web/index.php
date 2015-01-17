@@ -49,8 +49,11 @@ Flight::map('notFound', function(){
 });
 
 Flight::map('error', function(\Exception $e){
-    if(file_exists(Flight::get('flight.views.path').'/Errors/500.tpl')) {
-        Flight::render('Errors/500.tpl', array(
+    $code = http_response_code();
+    if($code == 200)
+        $code=500;
+    if(file_exists(Flight::get('flight.views.path').'/Errors/'.$code.'.tpl')) {
+        Flight::render('Errors/'.$code.'.tpl', array(
             'message' => $e->getMessage(),
             'code' => $e->getCode(),
             'line' => $e->getLine(),
