@@ -2,7 +2,7 @@
 Backbone to build a simple Flight App
 
 ### Presentation
-FlightPilot is just a backbone to build a Flight App. Therefore you'll need Flight from [mikecao](https://github.com/mikecao/flight).
+FlightPilot is just a backbone to build a Flight App. Therefore you'll need to know Flight from [mikecao](https://github.com/mikecao/flight). You can install FlightPilot with composer : *php composer.phar create-project purplebabar/flightpilot path/to/your/project*
 
 ### Config
 In the *app/config* folder you'll be able to congfigure your app.
