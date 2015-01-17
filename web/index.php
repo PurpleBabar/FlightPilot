@@ -12,11 +12,16 @@ foreach (glob(__DIR__.'/../src'.'/Controller/*.php') as $filename){
 	require $filename;
 }
 
+// Including all Routing files
+foreach (glob(__DIR__.'/../src'.'/Router/*.php') as $filename){
+    require $filename;
+}
+
 // Including values from config.yml
-$data = Spyc::YAMLLoad(__DIR__ . '/../app/config/config.yml');
+$config = Spyc::YAMLLoad(__DIR__ . '/../app/config/config.yml');
 
 // Flight
-array_walk_recursive($data['flight'], function($value,$key){
+array_walk_recursive($config['flight'], function($value,$key){
 	Flight::set($key, eval('return '. $value . ';'));
 });
 
