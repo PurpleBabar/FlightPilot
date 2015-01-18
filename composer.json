@@ -2,7 +2,7 @@
     "name": "purplebabar/flightpilot",
     "type": "project",
     "description": "This is a Backbone to build simple app with Flight",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "time": "2015/01/17",
     "license": "MIT",
     "authors": [
