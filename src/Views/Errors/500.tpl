@@ -15,7 +15,14 @@
 		{foreach $trace as $tr}
 			{if $tr@index is even}
 			<li class="even">
-				<span class="one">in {$tr.file} on line {$tr.line}</span>
+				<span class="one">
+					{if isset($tr.file)}
+						in {$tr.file} 
+					{/if}
+					{if isset($tr.line)}
+						on line {$tr.line}
+					{/if}
+				</span>
 				<span class="two"> 
 					{if isset($tr.class)} 
 						<b>Class</b> : {$tr.class}
@@ -27,8 +34,15 @@
 			</li>
 			{else}
 			<li>
-				<span class="one">in {$tr.file} on line {$tr.line}</span>
-				<span class="two">
+				<span class="one">
+					{if isset($tr.file)}
+						in {$tr.file} 
+					{/if}
+					{if isset($tr.line)}
+						on line {$tr.line}
+					{/if}
+				</span>
+				<span class="two"> 
 					{if isset($tr.class)} 
 						<b>Class</b> : {$tr.class}
 					{/if}
