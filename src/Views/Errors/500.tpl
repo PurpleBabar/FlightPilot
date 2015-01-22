@@ -16,12 +16,26 @@
 			{if $tr@index is even}
 			<li class="even">
 				<span class="one">in {$tr.file} on line {$tr.line}</span>
-				<span class="two"><b>Class</b> : {$tr.class} <b>Function</b> : {$tr.function}</span>
+				<span class="two"> 
+					{if isset($tr.class)} 
+						<b>Class</b> : {$tr.class}
+					{/if}
+					{if isset($tr.function)} 
+						<b>Function</b> : {$tr.function}
+					{/if}
+				</span>
 			</li>
 			{else}
 			<li>
 				<span class="one">in {$tr.file} on line {$tr.line}</span>
-				<span class="two"><b>Class</b> : {$tr.class} <b>Function</b> : {$tr.function}</span>
+				<span class="two">
+					{if isset($tr.class)} 
+						<b>Class</b> : {$tr.class}
+					{/if}
+					{if isset($tr.function)} 
+						<b>Function</b> : {$tr.function}
+					{/if}
+				</span>
 			</li>
 			{/if}
 		{/foreach}
